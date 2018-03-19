@@ -1,6 +1,6 @@
 {
   "name": "robust-promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easy to use, retryable promise factory. Pass it a promise, get a robust-promise!",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "reliable",
     "robust"
   ],
-  "author": "Nathan Mors",
+  "author": "Nathan Pickworth",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/NateDigital/robust-promise/issues"
