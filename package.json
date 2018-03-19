@@ -1,0 +1,27 @@
+{
+  "name": "robust-promise",
+  "version": "1.0.0",
+  "description": "Easy to use, retryable promise factory. Pass it a promise, get a robust-promise!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NateDigital/robust-promise.git"
+  },
+  "keywords": [
+    "retry",
+    "retryable",
+    "robust",
+    "easy",
+    "promise",
+    "reliable"
+  ],
+  "author": "Nathan Mors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NateDigital/robust-promise/issues"
+  },
+  "homepage": "https://github.com/NateDigital/robust-promise#readme"
+}
