@@ -1,5 +1,5 @@
 <center>
-<img src="doc/logo.png" />
+<img src="https://raw.githubusercontent.com/NateDigital/robust-promise/master/doc/logo.png" />
 
 </center>
 
