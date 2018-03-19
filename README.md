@@ -61,7 +61,7 @@ Let's say that you want to configure the number of retries to 20, and the delay 
 ```js 
 const robustPromise = require('robust-promise')
 
-robustPromise(sendEmail, 20, 500)
+robustPromise(sendEmail, 20, 0.5)
 ```
 
 ---
@@ -75,7 +75,7 @@ const robustPromise = require('robust-promise')
 
 const cfg = {
   retries: 10,
-  delay: 10000,
+  delay: 10,
   exp: false
 }
 
@@ -96,3 +96,10 @@ Contributions are more than welcome! To contribute
 
  - Opening a pull request
  - Reporting an issue
+
+## Tests
+
+To run the unit tests:
+```
+npm test
+```

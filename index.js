@@ -4,11 +4,11 @@
  * 
  * @param promise the promise that you wish to pass in
  * @param maxTries (optional, default=3) the number of times you want to retry
- * @param delay (optional, default=3000) milliseconds to wait before retrying
+ * @param delay (optional, default=3000) seconds to wait before retrying
  * @param exponential (optional, default=true)
  * @returns Promise
  */
-module.exports = (promiseFunc, maxTries = 3, delay = 3000, exponential = true) => 
+module.exports = (promiseFunc, maxTries = 3, delay = 3, exponential = true) => 
   new Promise((resolve, reject) => {
     let tries = 0
     const tryResolve = () => {
@@ -17,7 +17,7 @@ module.exports = (promiseFunc, maxTries = 3, delay = 3000, exponential = true) =
         .then(data => resolve(data))
         .catch(err => {
           if (tries >= maxTries) return reject(err)
-          else setTimeout(tryResolve, exponential ? Math.pow(delay, maxTries) : delay)
+          else setTimeout(tryResolve, exponential ? Math.pow(delay, tries) * 1000 : delay)
         })
     }
     tryResolve()
