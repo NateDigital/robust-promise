@@ -2,11 +2,11 @@
  * Takes your promise and return a robust promise.
  * Retries your promise a number of times before rejecting. 
  * 
- * @param promise the promise that you wish to pass in
- * @param maxTries (optional, default=3) the number of times you want to retry
- * @param delay (optional, default=3000) seconds to wait before retrying
- * @param exponential (optional, default=true)
- * @returns Promise
+ * @param {function} promiseFunc - Function you wish to pass in that returns a promise
+ * @param {number} maxTries - (optional, default=3) the number of times you want to retry
+ * @param {number} delay - (optional, default=3000) seconds to wait before retrying
+ * @param {boolean} exponential - (optional, default=true)
+ * @returns {Promise} - Returns a robust promise
  */
 module.exports = (promiseFunc, maxTries = 3, delay = 3, exponential = true) => 
   new Promise((resolve, reject) => {

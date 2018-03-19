@@ -2,7 +2,7 @@ const robustPromise = require('./')
 
 const workingService = () => new Promise((resolve, reject) => resolve(true))
 const brokenService = () => new Promise((resolve, reject) => reject(false))
-const returnFlakeyService = (howManyTriesTillItWorks) => {
+const returnFlakeyService = howManyTriesTillItWorks => {
     let tries = 0
     return () => new Promise((resolve, reject) => {
         tries++
