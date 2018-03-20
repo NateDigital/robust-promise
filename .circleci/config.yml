@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.9.4
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package-lock.json" }}
+          - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run Unit Tests
+          command: npm run test-ci
+      - run:
+          name: Copy Jest test report
+          command: mkdir -p /tmp/reports/jest && cp test-report.xml /tmp/reports/jest
+      - store_test_results:
+          path: /tmp/reports
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - save_cache:
+          paths:
+            - ~/repo
+          key: built-project-{{ .BuildNum }}

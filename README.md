@@ -1,7 +1,6 @@
-<center>
 <img src="https://raw.githubusercontent.com/NateDigital/robust-promise/master/doc/logo.png" />
 
-</center>
+[![CircleCI](https://circleci.com/gh/NateDigital/robust-promise.svg?style=svg)](https://circleci.com/gh/NateDigital/robust-promise)
 
  * **Production Ready**
  * Takes your promise and returns a **robust-promise**

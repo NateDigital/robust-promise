@@ -1,10 +1,11 @@
 {
   "name": "robust-promise",
-  "version": "1.0.6",
-  "description": "Easy to use, retryable promise factory. Pass it a promise, get a robust-promise!",
+  "version": "1.0.7",
+  "description": "Retry promise. Easy to use, retryable promise. Pass it a promise, get a robust-promise!",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-ci": "jest --ci"
   },
   "repository": {
     "type": "git",
