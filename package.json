@@ -1,6 +1,6 @@
 {
   "name": "robust-promise",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Retry promise. Easy to use, retryable promise. Pass it a promise, get a robust-promise!",
   "main": "index.js",
   "scripts": {
